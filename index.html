@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/fontawesome/css/all.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sorry">
+    <p> O N L Y   -   F O R   -   D E S K T O P </p>
+    <img src="https://media.giphy.com/media/55mASro6Xx4lgKnLE3/giphy.gif" alt="">
+    </div>
+    
+    <div class = "home_window">
+        <div><i class="fab fa-monero fa-10x"></i></div>
+        <div class = "inc-time">
+            <i class="fas fa-rupee-sign fa-3x" ></i>
+            <input  class="form-control" type="number" placeholder="INCOME" id="main_budget">
+        </div>
+        <div class = "inc-time" >
+            <i class="fas fa-stopwatch fa-3x"></i>
+            <input class="form-control" type="date" placeholder="END DATE" id="end_date">
+        </div>   
+    </div>
+    <div class="enter_button">
+        <button type="button" class="btn btn-warning" id="enter"> E N T E R </button>
+    </div>
+    <div class="budget_window">
+        <i id="refresh" class="far fa-window-close fa-3x"></i>
+        <div class = "fixed_block">
+            <div id = "head_div">
+                <div>
+                    <i class="fas fa-hand-holding-usd fa-3x"></i>
+                </div>
+                <div>
+                    <h1 id="fixed_budget"></h1>
+                </div>
+                <div id="edit"><i class="far fa-edit"></i></div>
+            </div>
+            
+            <div id="edit_input">
+                <input id="new_budget" type="numbers">
+                <button id = "change_btn" type="button"><i class="far fa-check-square"></i></button>
+            </div>
+        </div>    
+
+        <div class = "first_block">
+            <div id="shadow"  class="card text-white bg-primary mb-3" style="width: 18rem;">
+                <div class="card-header"> Balance </div>
+                <div class="card-body">
+                    <h1 id="budget_h1"></h1>
+                </div>
+            </div>
+
+            <div id="shadow" class="card text-white bg-warning mb-3" style="width: 18rem;">
+                <div class="card-header">Expenses</div>
+                <div class="card-body">
+                    <h1 id = "current_exp">0</h1>
+                </div>
+            </div>
+
+            <div id="shadow" class="card text-white bg-success mb-3" style="width: 18rem;">
+                <div class="card-header">Savings</div>
+                <div class="card-body">
+                    <h1 id = "savings_h1"></h1>
+                </div>
+            </div>
+
+        </div>
+        <h3> - ADD EXPENSES - </h3>
+        <div  class = "second_block">
+
+                
+                <div class="form-row align-items-center" id="dropdown">
+                    <div class="col-auto my-1">
+                      <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <option selected>Category</option>
+                        <option value="Rent">Rent</option>
+                        <option value="EMI">Emi</option>
+                        <option value="Grocery">Grocery</option>
+                        <option value="Bills">Bills</option>
+                        <option value="Others">Others</option>
+                      </select>
+                    </div>   
+                </div>
+                <div>
+                    <input type="text" id ="budget_description" placeholder="Description">
+                </div>
+                <div>
+                    <input id="exp_date" type="date">
+                </div>
+                <div>
+                <input  id="expense" type="number" placeholder="Enter Amount">
+                <button type="button" class="btn btn-secondary btn active" id="add_exp">ADD</button>
+                </div>
+                <button type="button" class="btn btn-secondary btn active" id="clear_form">CLEAR</button>
+            </div>  
+                  
+            <table class="table table-striped table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Amount</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+              </table>
+        </div>
+
+
+
+    <script src="styles/script.js"></script>
+</body>
+</html>
